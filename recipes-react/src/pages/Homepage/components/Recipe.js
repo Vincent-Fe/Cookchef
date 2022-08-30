@@ -54,8 +54,8 @@ const Recipe = ({ recipe, toggleLikeRecipe, deleteRecipe }) => {
 				<i
 					onClick={handleClickLike}
 					className={`${
-						recipe.liked ? 'text-primary' : ''
-					} fa-solid fa-lg fa-heart`}
+						recipe.liked ? 'text-primary fa-solid' : 'fa-regular'
+					}  fa-lg fa-star`}
 				></i>
 			</div>
 		</div>
