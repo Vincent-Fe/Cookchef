@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/cookchef-d.png';
 import styles from './Header.module.scss';
 import HeaderMenuResponsive from './HeaderMenuResponsive';
@@ -8,16 +9,15 @@ const Header = ({ setPage }) => {
 
 	return (
 		<header className={`${styles.header} d-flex flex-row align-items-center`}>
-			<div onClick={() => setPage('homepage')} className="flex-fill">
+			<NavLink to ='/' className="flex-fill">
 				<img src={logo} alt="cookchef logo" />
-			</div>
+			</NavLink>
 			<ul className={styles.headerList}>
-				<button
-					onClick={() => setPage('admin')}
+				<NavLink to ='/admin' 
 					className="btn btn-primary mr-15"
 				>
 					Ajouter une recette
-				</button>
+				</NavLink>
 				<button className="mr-15 btn btn-reverse-primary">Wishlist</button>
 				<button className="btn btn-primary">connexion</button>
 			</ul>
