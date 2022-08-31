@@ -19,7 +19,7 @@ const Header = ({ setPage }) => {
 					Ajouter une recette
 				</NavLink>
 				<button className="mr-15 btn btn-reverse-primary">Wishlist</button>
-				<button className="btn btn-primary">connexion</button>
+				<NavLink to ='/auth/login' className="btn btn-primary">Connexion</NavLink>
 			</ul>
 			<i
 				onClick={() => setShowMenu(!showMenu)}
