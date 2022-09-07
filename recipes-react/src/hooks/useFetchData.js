@@ -12,7 +12,7 @@ export const useFetchData = (url, page) => {
 				setIsLoading(true);
 				const queryParam = new URLSearchParams();
 				if (page) {
-					queryParam.append('skip', (page) * 9);
+					queryParam.append('skip', page * 9);
 					queryParam.append('limit', 9);
 				}
 
@@ -24,11 +24,6 @@ export const useFetchData = (url, page) => {
 			} catch (error) {
 				setError('ERREUR');
 			}
-			// finally {
-			// 	if (!cancel) {
-			// 		setIsLoading(false);
-			// 	}
-			// }
 		};
 		fetchData();
 		return () => (cancel = true);

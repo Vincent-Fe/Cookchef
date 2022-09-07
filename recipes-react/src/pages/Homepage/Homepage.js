@@ -5,7 +5,7 @@ import { ApiContext } from '../../context/ApiContext';
 import { useFetchData } from '../../hooks';
 import Loading from '../../components/Loading/Loading';
 
-const Homepage = (setUrl) => {
+const Homepage = () => {
 	const [filter, setFilter] = useState('');
 	const [page, setPage] = useState(0);
 
@@ -54,7 +54,6 @@ const Homepage = (setUrl) => {
 							.map(recipe => (
 								<Recipe
 									key={recipe._id}
-									setUrl={setUrl}
 									recipe={recipe}
 									toggleLikeRecipe={updateLikeRecipe}
 									deleteRecipe={deleteRecipe}
